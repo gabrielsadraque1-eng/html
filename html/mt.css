@@ -1,7 +1,8 @@
-body{
-background-image: url("mt.jpeg");
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-background-attachment: fixed;
+
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    object-fit: contain;
 }

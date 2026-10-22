@@ -1,0 +1,211 @@
+
+
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #111116;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+/* CABEÇALHO */
+
+header {
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #19151f, #111116);
+    border-bottom: 1px solid #30283b;
+}
+
+.subtitulo {
+    color: #b794ff;
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+header h1 {
+    font-size: 48px;
+    margin: 20px 0;
+    letter-spacing: 3px;
+}
+
+.descricao {
+    color: #b9b9c6;
+    font-size: 17px;
+}
+
+/* MENU */
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding: 20px;
+    background-color: #19191f;
+    border-bottom: 1px solid #30283b;
+}
+
+nav a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #b794ff;
+}
+
+/* CONTEÚDO */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 25px;
+}
+
+section h2 {
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.introducao {
+    color: #a7a7b5;
+    margin-bottom: 30px;
+}
+
+/* CARDS DOS ARTISTAS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.card {
+    display: block;
+    min-height: 210px;
+    padding: 28px;
+    border: 1px solid #35313e;
+    border-radius: 12px;
+    background-color: #1b1b23;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #a855f7;
+    background-color: #24202d;
+}
+
+.numero {
+    color: #a7a7b5;
+    font-size: 13px;
+}
+
+.card h3 {
+    font-size: 30px;
+    margin: 18px 0 10px;
+}
+
+.card p {
+    color: #b9b9c6;
+    line-height: 1.5;
+}
+
+.link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #c4a5ff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.matue h3 {
+    color: #c4a5ff;
+}
+
+.teto h3 {
+    color: #f5f5f5;
+}
+
+.brandao h3 {
+    color: #d1d1d8;
+}
+
+.wiu h3 {
+    color: #ff8b8b;
+}
+
+/* SOBRE */
+
+.sobre {
+    margin-top: 55px;
+    padding: 30px;
+    border-left: 3px solid #a855f7;
+    background-color: #19191f;
+    border-radius: 0 10px 10px 0;
+}
+
+.sobre p {
+    color: #b9b9c6;
+    line-height: 1.8;
+}
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #0b0b0e;
+    border-top: 1px solid #30283b;
+}
+
+footer p {
+    color: #a7a7b5;
+    font-size: 13px;
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+    header {
+        padding: 45px 15px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav {
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    main {
+        padding: 35px 18px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-height: 180px;
+    }
+}
+
