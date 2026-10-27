@@ -209,3 +209,45 @@ footer p {
     }
 }
 
+
+/* LAYOUT DO CONTEÚDO */
+
+.conteudo {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 30px;
+}
+
+aside {
+    width: 30%;
+    padding: 20px;
+    background-color: #19191f;
+    border-radius: 10px;
+}
+
+aside h2 {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.conteudo main {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    padding: 20px;
+}
+
+/* LAYOUT EM CELULARES */
+
+@media (max-width: 600px) {
+    .conteudo {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    aside,
+    .conteudo main {
+        width: 100%;
+    }
+}
