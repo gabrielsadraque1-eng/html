@@ -5,8 +5,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>História dos trappers</title>
-<link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,20 +17,98 @@
         <h1>História dos trappers</h1>
     </header>
 
+    <!-- MENU DE NAVEGAÇÃO -->
+
     <nav>
-        <a href="matue.html" style="color: purple;">Matuê</a>
-        <a href="teto.html" style="color: blue;">Teto</a>
-        <a href="brandrão.html" style="color: black;">Brandão</a>
-        <a href="wiu.html" style="color: red;">WIU</a>
+
+        <a href="index.html">Início</a>
+
+        <div class="dropdown">
+
+            <a href="#" class="dropdown-botao">
+                Artistas ▾
+            </a>
+
+            <div class="dropdown-conteudo">
+
+                <a href="matue.html" class="cor-matue">
+                    Matuê
+                </a>
+
+                <a href="teto.html" class="cor-teto">
+                    Teto
+                </a>
+
+                <a href="brandrão.html" class="cor-brandao">
+                    Brandão
+                </a>
+
+                <a href="wiu.html" class="cor-wiu">
+                    WIU
+                </a>
+
+            </div>
+
+        </div>
+
+        <a href="vagas.html">Ingressos</a>
+
     </nav>
+
+    <!-- CONTEÚDO DA PÁGINA -->
 
     <div class="conteudo">
 
-        <aside>
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque temporibus, rem tenetur dignissimos facere illo soluta totam nulla consequatur culpa officia minus itaque error nisi libero doloremque. Suscipit, adipisci amet?</h2>
+        <!-- PUBLICIDADE -->
+
+        <aside id="publicidade">
+
+            <h2>PUBLICIDADE</h2>
+
+            <div class="propaganda">
+
+                <input type="checkbox" id="img1">
+                <label for="img1">
+                    <img src="mt.jpeg" alt="Máquina do Tempo">
+                </label>
+
+                <input type="checkbox" id="img2">
+                <label for="img2">
+                    <img src="colapso global.avif" alt="Colapso Global">
+                </label>
+
+                <input type="checkbox" id="img3">
+                <label for="img3">
+                    <img src="xtranho.jpeg" alt="Xtranho">
+                </label>
+
+                <input type="checkbox" id="img4">
+                <label for="img4">
+                    <img src="vidigal.jpeg" alt="Vidigal">
+                </label>
+
+                <input type="checkbox" id="img5">
+                <label for="img5">
+                    <img src="333.jpeg" alt="333">
+                </label>
+
+                <input type="checkbox" id="img6">
+                <label for="img6">
+                    <img src="dia azul.jpeg" alt="Dia Azul">
+                </label>
+
+                <a href="index.html" class="reiniciar">
+                    <img src="noite.jpeg" alt="Mostrar todas novamente">
+                </a>
+
+            </div>
+
         </aside>
 
+        <!-- TEXTO PRINCIPAL -->
+
         <main>
+
             <h2>Bem-vindo!</h2>
 
             <p>
@@ -43,15 +122,17 @@
                 Aqui você poderá conhecer mais sobre os artistas
                 e adquirir ingressos para os shows.
             </p>
+
         </main>
 
     </div>
+
+    <!-- RODAPÉ -->
 
     <footer>
         <p>Página inicial</p>
     </footer>
 
 </body>
-</html>
 
-    
+</html>

@@ -1,6 +1,4 @@
 
-
-
 /* CONFIGURAÇÕES GERAIS */
 
 * {
@@ -50,10 +48,14 @@ header h1 {
 nav {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 35px;
     padding: 20px;
     background-color: #19191f;
     border-bottom: 1px solid #30283b;
+
+    position: relative;
+    z-index: 200;
 }
 
 nav a {
@@ -65,6 +67,83 @@ nav a {
 
 nav a:hover {
     color: #b794ff;
+}
+
+/* MENU DROPDOWN */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-botao {
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* CONTEÚDO DO DROPDOWN */
+
+.dropdown-conteudo {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    min-width: 160px;
+
+    background-color: #19191f;
+    border: 1px solid #35313e;
+    border-radius: 8px;
+
+    overflow: hidden;
+    z-index: 300;
+}
+
+/* LINKS DO DROPDOWN */
+
+.dropdown-conteudo a {
+    display: block;
+    padding: 12px 16px;
+    color: #f5f5f5;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* MOSTRAR O DROPDOWN */
+
+.dropdown:hover .dropdown-conteudo,
+.dropdown:focus-within .dropdown-conteudo {
+    display: block;
+}
+
+/* CORES DOS ARTISTAS */
+
+/* MATUÊ - ROXO */
+
+.dropdown-conteudo .cor-matue:hover {
+    background-color: #6b35a8;
+    color: white;
+}
+
+/* TETO - AZUL */
+
+.dropdown-conteudo .cor-teto:hover {
+    background-color: #2459a8;
+    color: white;
+}
+
+/* BRANDÃO - PRETO */
+
+.dropdown-conteudo .cor-brandao:hover {
+    background-color: #080808;
+    color: white;
+}
+
+/* WIU - VERMELHO */
+
+.dropdown-conteudo .cor-wiu:hover {
+    background-color: #a82727;
+    color: white;
 }
 
 /* CONTEÚDO */
@@ -180,9 +259,124 @@ footer p {
     font-size: 13px;
 }
 
+/* LAYOUT DO CONTEÚDO */
+
+.conteudo {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 30px;
+}
+
+/* ASIDE FIXO */
+
+aside {
+    position: fixed;
+    top: 150px;
+    left: 20px;
+    width: 250px;
+    height: 450px;
+    padding: 20px;
+
+    background-color: #19191f;
+    border: 1px solid #35313e;
+    border-radius: 10px;
+
+    z-index: 100;
+    overflow-y: auto;
+}
+
+aside h2 {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* PROPAGANDA - IMAGENS EMPILHADAS */
+
+.propaganda {
+    position: relative;
+    width: 100%;
+    height: 120px;
+}
+
+/* ESCONDE OS CHECKBOXES */
+
+.propaganda input {
+    display: none;
+}
+
+/* POSICIONA AS IMAGENS NO MESMO LUGAR */
+
+.propaganda label,
+.propaganda a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 120px;
+    cursor: pointer;
+}
+
+/* TAMANHO DAS IMAGENS */
+
+.propaganda img {
+    display: block;
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ORGANIZA AS IMAGENS EM CAMADAS */
+
+.propaganda label:nth-of-type(1) {
+    z-index: 7;
+}
+
+.propaganda label:nth-of-type(2) {
+    z-index: 6;
+}
+
+.propaganda label:nth-of-type(3) {
+    z-index: 5;
+}
+
+.propaganda label:nth-of-type(4) {
+    z-index: 4;
+}
+
+.propaganda label:nth-of-type(5) {
+    z-index: 3;
+}
+
+.propaganda label:nth-of-type(6) {
+    z-index: 2;
+}
+
+.propaganda a {
+    z-index: 1;
+}
+
+/* ESCONDE A IMAGEM CLICADA */
+
+.propaganda input:checked + label {
+    display: none;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+.conteudo main {
+    flex: 1;
+    min-width: 0;
+    margin-left: 270px;
+    padding: 20px;
+}
+
 /* CELULARES */
 
 @media (max-width: 600px) {
+
     header {
         padding: 45px 15px;
     }
@@ -207,47 +401,25 @@ footer p {
     .card {
         min-height: 180px;
     }
-}
 
-
-/* LAYOUT DO CONTEÚDO */
-
-.conteudo {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 30px;
-}
-
-aside {
-    width: 30%;
-    padding: 20px;
-    background-color: #19191f;
-    border-radius: 10px;
-}
-
-aside h2 {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-.conteudo main {
-    flex: 1;
-    min-width: 0;
-    margin: 0;
-    padding: 20px;
-}
-
-/* LAYOUT EM CELULARES */
-
-@media (max-width: 600px) {
     .conteudo {
         flex-direction: column;
         padding: 15px;
     }
 
-    aside,
+    aside {
+        position: static;
+        width: 100%;
+        height: 450px;
+    }
+
     .conteudo main {
+        margin-left: 0;
         width: 100%;
     }
+
+    .dropdown-conteudo {
+        left: 0;
+    }
 }
+
